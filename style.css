@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,300;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Roboto','sans-serif';
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+img{
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    box-shadow: 2px 2px 5px 3px black;
+    border-radius: 5%;
+}
+
+p{
+    margin: 10px;
+    color: silver;
+}
+
+
+
+.box{
+    background-color: steelblue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    margin: 20px;
+    border-radius: 10px;
+    transform: translateX(400%);
+    transition: transform 0.4s ease;
+    border-radius: 5%;
+}
+
+.box:nth-of-type(even){
+    transform: translateX(-400%);
+
+}
+
+.box.show{
+    transform: translateX(0);
+}
+
+.footer{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: silver;
+    width: 100%;
+    margin: 10px;
+    margin-bottom: 30px;
+}
+
+.icon{
+    width: 40%;
+    border-radius: 20px;
+    padding: 2px;
+}
+
+.icon:hover{
+    box-shadow: 1px 1px 5px 1px white;
+}
+
+#w{
+    animation: pulse-blue 3s infinite;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+
+
+#y{
+    animation: pulse-white 1.5s infinite;
+    margin-top: 100px;
+}
+
+
+@keyframes pulse-blue {
+    0% {
+      box-shadow: 2px 3px 6px 4px steelblue;
+    }
+    
+    70% {
+      box-shadow: 0 0 0 10px rgba(52, 172, 224, 0);
+    }
+    
+    100% {
+      box-shadow: 0 0 0 0 rgba(52, 172, 224, 0);
+    }
+  }
+
+  @keyframes pulse-white {
+    0% {
+      box-shadow: 2px 3px 6px 4px rgb(241, 240, 240);
+    }
+    
+    70% {
+      box-shadow: 0 0 0 7px rgba(52, 172, 224, 0);
+    }
+    
+    100% {
+      box-shadow: 0 0 0 0 rgba(52, 172, 224, 0);
+    }
+  }
